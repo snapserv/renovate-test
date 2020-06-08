@@ -35,7 +35,6 @@
         "#\\s*renovate:\\s*datasource=repology depName=(?<lookupName>[^/]+/(?<depName>.*?))\\s+ENV .*?_VERSION=\"?(?<currentValue>.*?)\"?\\s"
       ],
       "depNameTemplate": "alpine/{{{depName}}}",
-      "lookupNameTemplate": "{{ replace \"alpine/\" \"alpine_3_12/\" lookupName }}",
       "datasourceTemplate": "repology",
       "versioningTemplate": "loose"
     },
