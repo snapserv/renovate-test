@@ -1,14 +1,10 @@
-# testing
+FROM centos:8.1.1911
 
-# renovate: datasource=repology depName=alpine_3_12/gcc
-ENV PKG1_VERSION="0.0.1"
-# renovate: datasource=repology depName=alpine/gcc
-ENV PKG2_VERSION="0.0.2"
-# renovate: datasource=repology depName=alpine/invalid-package
-ENV PKG3_VERSION="0.0.3"
-# renovate: datasource=repology depName=invalid-repository/gcc
-ENV PKG4_VERSION="0.0.4"
-# renovate: datasource=repology depName=adelie_current/gcc
-ENV PKG5_VERSION="0.0.5"
+# renovate: datasource=repology depName=centos_8/gcc versioning=loose
+ENV GCC_VERSION="8.3.0"
+# renovate: datasource=repology depName=centos_8/openssl-devel versioning=loose
+ENV OPENSSL_DEVEL_VERSION="1.0.0c"
 
-# end testing
+RUN dnf install \
+    gcc-"${GCC_VERSION}" \
+    openssl-devel-"${OPENSSL_DEVEL_VERSION}"
