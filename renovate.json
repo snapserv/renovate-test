@@ -2,7 +2,8 @@
   "extends": [
     "config:base",
     "docker:enableMajor",
-    "docker:pinDigests"
+    "docker:pinDigests",
+    "default:disableRateLimiting"
   ],
   "regexManagers": [
     {
