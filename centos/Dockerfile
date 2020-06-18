@@ -1,4 +1,4 @@
-FROM centos:8.1.1911@sha256:9e0c275e0bcb495773b10a18e499985d782810e47b4fce076422acb4bc3da3dd
+FROM centos:8.2.2004@sha256:fd84102fc72960dd1b8da0ee3b4c13e3b0c1d2a085de118bc4c97821cd986e02
 
 # renovate: datasource=repology depName=centos_8/gcc versioning=loose
 ENV GCC_VERSION="8.3.0"
