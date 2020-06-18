@@ -5,9 +5,35 @@
     "docker:pinDigests",
     "default:disableRateLimiting"
   ],
+  "packageRules": [
+    {
+      "datasources": [
+        "repology"
+      ],
+      "packagePatterns": [
+        "^debian_stable/"
+      ],
+      "separateMajorMinor": false,
+      "groupName": "debian packages",
+      "groupSlug": "debian"
+    },
+    {
+      "datasources": [
+        "repology"
+      ],
+      "packagePatterns": [
+        "^centos_8/"
+      ],
+      "separateMajorMinor": false,
+      "groupName": "centos packages",
+      "groupSlug": "centos"
+    }
+  ],
   "regexManagers": [
     {
-      "fileMatch": ["(^|/)Dockerfile$"],
+      "fileMatch": [
+        "(^|/)Dockerfile$"
+      ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"?(?<currentValue>.*)\"?\\s"
       ],
